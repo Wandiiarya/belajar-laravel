@@ -60,3 +60,9 @@ Route::get('data/{name}/{bb}/{tb}', function ($name, $bb, $tb) {
         . " Keterangan:$ket<br>"
     ;
 });
+
+
+//Route optional parameter->ditandai dengan ?(tanda tanya)
+Route::get('myname/{name?}', function ($name ="wandi") {
+    return "Mt name is $name";
+});
