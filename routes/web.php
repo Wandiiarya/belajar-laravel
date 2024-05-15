@@ -15,6 +15,7 @@ use App\Http\Controllers\MerkController;
 
 
 
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -167,3 +168,12 @@ Route::get('merks/{id}', [MerkController::class, 'show']);
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// brand
+use App\Http\Controllers\brandController;
+Route::resource('brand', brandController::class);
